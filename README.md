@@ -18,10 +18,8 @@
 
 
 ----------------------------------------------------------------------------------
-(https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG)](https://github.com/Joao-Victor-RVG/github-readme-stats)
+![João victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&show_icons=true&theme=tokyonight)
 
+----------------------------------------------------------------------------------
 
-Joao-Victor-RVG
-Joao-Victor-RVG
-Joao-Victor-RVG
-
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Joao-Victor-RVG)](https://github.com/anuraghazra/github-readme-stats)
