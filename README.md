@@ -23,7 +23,7 @@
 ![João Victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&hide=contribs,prs_icons=true&theme=tokyonight)
 ----------------------------------------------------------------------------------
 # My Social Medias: <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60">
-
+<a href="https://www.instagram.com/joaovictor_rvg/?hl=pt-br" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
 <a href="https://twitter.com/Joaovictorgodo4"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
 <a href="mailto:joaovictornkz@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
 <a href="https://steamcommunity.com/profiles/76561198351368276/" target="_blank"><img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white"></a>
