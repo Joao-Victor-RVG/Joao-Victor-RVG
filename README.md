@@ -1,5 +1,15 @@
 ----------------------------------------------------------------------------------
 
+visitor counting
+
+![Visitor Count](https://profile-counter.glitch.me/Joao-Victor-RVG/count.svg)
+<div style="text-align: right">
+
+
+
+
+
+
 # Welcome!
 
  
