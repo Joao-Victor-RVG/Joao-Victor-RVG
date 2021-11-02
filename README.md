@@ -20,8 +20,10 @@
 ----------------------------------------------------------------------------------
 ![João victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&show_icons=true&theme=tokyonight)
 ![João Victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&hide=contribs,prs_icons=true&theme=tokyonight)
-
 ----------------------------------------------------------------------------------
+# My Social Medias:
+
+
 
 
 
