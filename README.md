@@ -29,7 +29,7 @@
 <a href="https://steamcommunity.com/profiles/76561198351368276/" target="_blank"><img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white"></a>
 <a href="https://www.reddit.com/user/Joao-Victor-RVG"><img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white"></a>
 <a href="https://discord.gg/yzKPWEpa" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a> 
-    
+
 
 
 
