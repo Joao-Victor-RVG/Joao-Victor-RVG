@@ -12,7 +12,7 @@
 
 :house_with_garden: I’m from Brazil.
 
-:books: I’m currently learning HTML5 CSS3 and JAvaScript
+:books: I’m currently learning HTML5 CSS3 and JavaScript
 
 :outbox_tray: 2021 Goals: Improve my knowledge in the field of I.T
 
