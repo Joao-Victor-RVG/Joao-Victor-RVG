@@ -19,7 +19,7 @@ visitor counting
 
  
 
-:computer: i'm web developer student 
+:computer:  I'm a Brazilian software engineer student 
 
 :house_with_garden: I’m from Brazil.
 
