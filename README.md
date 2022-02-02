@@ -25,7 +25,7 @@ visitor counting
 
 :books: I’m currently learning HTML5 CSS3 and JavaScript
 
-:outbox_tray: 2021 Goals: Improve my knowledge in the field of I.T
+:outbox_tray: 2022 Goals: Improve my knowledge in the field of I.T
 
 
 ----------------------------------------------------------------------------------
