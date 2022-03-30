@@ -23,7 +23,7 @@ visitor counting
 
 :house_with_garden: I’m from Brazil.
 
-:books: I’m currently learning React Native 
+:books: I’m currently learning ReactJs
 
 :outbox_tray: 2022 Goals: Improve my knowledge in the field of I.T
  
