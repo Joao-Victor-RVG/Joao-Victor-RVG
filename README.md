@@ -35,6 +35,11 @@ visitor counting
 ----------------------------------------------------------------------------------
 ![João victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&show_icons=true&theme=tokyonight)
 ![João Victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&hide=contribs,prs_icons=true&theme=tokyonight)
+<br>
+  <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
+  <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
+  
 ----------------------------------------------------------------------------------
 # My Social Medias: <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60">
 <a href="https://www.instagram.com/joaovictor_rvg/?hl=pt-br" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
@@ -42,6 +47,8 @@ visitor counting
 <a href="https://steamcommunity.com/profiles/76561198351368276/" target="_blank"><img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white"></a>
 <a href="https://www.reddit.com/user/Joao-Victor-RVG"><img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white"></a>
 <a href="https://discord.gg/yzKPWEpa" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a> 
+
+
 
 ----
 
