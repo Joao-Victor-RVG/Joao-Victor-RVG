@@ -1,61 +1,52 @@
-----------------------------------------------------------------------------------
-
-visitor counting
-
-![Visitor Count](https://profile-counter.glitch.me/Joao-Victor-RVG/count.svg)
-<div style="text-align: right">
-
-
-
-
-
-
-# Welcome!
-
- 
+<img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
 
 ## Hi there, I'm João Victor <img src="https://media.giphy.com/media/12oufCB0MyZ1Go/giphy.gif" width="50">
-<img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230">
-
- 
-
-:computer:  I'm a Brazilian computer sciences student 
-
-:house_with_garden: I’m from Brazil.
-
-:books: I’m currently learning AngularJs
-
-:outbox_tray: 2022 Goals: Improve my knowledge in the field of I.T
- 
- <br>
- 
- #NeverStopLearning
 
 
-----------------------------------------------------------------------------------
-![João victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&show_icons=true&theme=tokyonight)
-![João Victor's GitHub stats](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&hide=contribs,prs_icons=true&theme=tokyonight)
-<br>
-  <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-  <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-  
-----------------------------------------------------------------------------------
+<h3> :man: &nbsp;About Me </h3>
+
+- 🤔 &nbsp; Exploring new technologies and developing software solutions
+- 🎓 &nbsp; Studying Computer Science at <a href="https://www.ifgoiano.edu.br/home/index.php/morrinhos.html">IF-Goiano</a>.
+- 💼 &nbsp; Working as a software development intern at <a href="https://deskfy.io/">Deskfy.io</a>
+- 🌱 &nbsp; learning more about **AngularJS & ReactJs**.
+- 🏡 &nbsp; Im Brazilian 
+- 🌎 &nbsp; my languages **:brazil: 🏴󠁧󠁢󠁥󠁮󠁧󠁿**
+
+                                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # My Social Medias: <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60">
-<a href="https://www.instagram.com/joaovictor_rvg/?hl=pt-br" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-<a href="mailto:joaovictornkz@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-<a href="https://steamcommunity.com/profiles/76561198351368276/" target="_blank"><img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white"></a>
-<a href="https://www.reddit.com/user/Joao-Victor-RVG"><img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white"></a>
-<a href="https://discord.gg/yzKPWEpa" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a> 
+<p align="left">
+ 
+ 
+ <a href="joao.godoi@deskfy.io" alt="Gmail">
+  <img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=LINK-DO-SEU-EMAIL" 
+ 
 
+  <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-rocha-vilela-godoi-1318581ab/" alt="Linkedin">
+  <img src="https://img.shields.io/badge/-Linkedin-0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=LINK-DO-SEU-LINKEDIN" /></a>
 
-
-----
-
-<br>
-
-<img src="https://i.ibb.co/0MZzJ2d/download.png" border="0">
-
+  
+  <a href="https://www.instagram.com/joaovictor_rvg/?hl=pt-br" alt="Instagram">
+  <img src="https://img.shields.io/badge/-Instagram-DF0174?style=flat-square&labelColor=DF0174&logo=instagram&logoColor=white&link=LINK-DO-SEU-INSTAGRAM"/></a>
+ 
+</p> 
 
 
 
