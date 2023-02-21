@@ -12,16 +12,15 @@
 - 🏡 &nbsp; Im Brazilian 
 - 🌎 &nbsp; my languages **:brazil: 🏴󠁧󠁢󠁥󠁮󠁧󠁿**
 
+<br>
+
+
+## 🚀 GitHub Stats
                                              
+[![card](https://github-readme-stats.vercel.app/api?username=Joao-Victor-RVG&theme=tokyonight&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
 
-
-
-
-
-
-
-
+[![iuricode](https://github-readme-stats.vercel.app/api/top-langs/?username=Joao-Victor-RVG&hide=html&layout=compact&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
 
 
