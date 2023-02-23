@@ -44,7 +44,6 @@
 
 
 
-
 # My Social Medias: <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60">
 <p align="left">
  
@@ -63,7 +62,9 @@
 </p> 
 
 
+<br>
 
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Joao-Victor-RVG&bg_color=121563&color=1b9bb1&line=00ff7b&point=000000&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 
 
