@@ -7,7 +7,6 @@
 
 - 🤔 &nbsp; Exploring new technologies and developing software solutions
 - 🎓 &nbsp; Studying Computer Science at <a href="https://www.ifgoiano.edu.br/home/index.php/morrinhos.html">IF-Goiano</a>.
-- 💼 &nbsp; Working as a software development intern at <a href="https://deskfy.io/">Deskfy.io</a>
 - 🌱 &nbsp; learning more about **AngularJS & ReactJs**.
 - 🏡 &nbsp; Im Brazilian 
 - 🌎 &nbsp; my languages **:brazil: 🏴󠁧󠁢󠁥󠁮󠁧󠁿**
