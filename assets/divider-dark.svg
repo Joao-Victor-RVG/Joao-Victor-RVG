@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="28" viewBox="0 0 1200 28" role="img" aria-labelledby="title desc">
+<title id="title">section divider</title>
+<desc id="desc">thin divider</desc>
+<style>
+:root{--bg:#0A1628;--panel:#0E1F38;--grid:#16304F;--grid2:#1D3D63;--line:#2A5A8F;--primary:#0070F2;--primary-text:#4DA3FF;--accent:#22D3EE;--text:#E6EEF8;--muted:#8BA3C1;--node:#0F2240;--node-stroke:#24497A;--core:#0B2A55;--chip-text:#FFFFFF}
+.bg{fill:var(--bg)} .panel{fill:var(--panel)}
+.grid{stroke:var(--grid);stroke-width:1} .grid2{stroke:var(--grid2);stroke-width:1}
+.sans{font-family:Inter, 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif} .mono{font-family:'JetBrains Mono', 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace}
+.t-text{fill:var(--text)} .t-muted{fill:var(--muted)} .t-accent{fill:var(--accent)}
+.t-primary{fill:var(--primary-text)} .t-chip{fill:var(--chip-text)}
+.wire{fill:none;stroke:var(--line);stroke-width:1.6}
+.wire-flow{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-dasharray:4 14;opacity:.55;animation:flow 1.6s linear infinite}
+.node{fill:var(--node);stroke:var(--node-stroke);stroke-width:1.2}
+.core{fill:var(--core);stroke:var(--primary);stroke-width:1.6}
+.frame{fill:none;stroke:var(--line);stroke-width:1.4;stroke-dasharray:6 6}
+.chip{fill:var(--primary)} .chip-o{fill:none;stroke:var(--line);stroke-width:1.2}
+.chip-a{fill:none;stroke:var(--accent);stroke-width:1.2}
+.bar{fill:var(--primary)} .bar-a{fill:var(--accent)}
+.pulse{fill:var(--accent)} .halo{fill:var(--accent);opacity:.22}
+.mark{stroke:var(--accent);stroke-width:1.5;fill:none}
+.port{fill:var(--bg);stroke:var(--accent);stroke-width:1.4}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@keyframes breathe{0%,100%{opacity:.35}50%{opacity:.9}}
+.breathe{animation:breathe 3.2s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.anim,.wire-flow,.breathe{animation:none;display:none}}
+</style>
+<defs><linearGradient id="fade" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:var(--line);stop-opacity:0"/><stop offset=".5" style="stop-color:var(--line);stop-opacity:1"/><stop offset="1" style="stop-color:var(--line);stop-opacity:0"/></linearGradient></defs>
+<rect x="0" y="13.5" width="1200" height="1" fill="url(#fade)"/>
+<rect x="594" y="8" width="12" height="12" transform="rotate(45 600 14)" class="port"/>
+<circle cx="600" cy="14" r="2.2" class="pulse"/>
+<circle cx="560" cy="14" r="1.8" class="pulse" opacity=".6"/><circle cx="640" cy="14" r="1.8" class="pulse" opacity=".6"/>
+</svg>

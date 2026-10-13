@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+<title id="title">How I build: SAP S/4HANA Clean Core with side-by-side extensions</title>
+<desc id="desc">SAP S/4HANA Public Cloud Edition in the center (ABAP Cloud, RAP, CDS Views; EWM and MM), wrapped by an integration layer (OData, Communication Arrangements, SAP BTP, Integration Suite), connected to side-by-side apps: Kotlin/Android warehouse apps on EWM, Python/Streamlit automation, Java services, Fiori Elements and web UIs, Salesforce CRM and AI agents via MCP.</desc>
+<style>
+:root{--bg:#0A1628;--panel:#0E1F38;--grid:#16304F;--grid2:#1D3D63;--line:#2A5A8F;--primary:#0070F2;--primary-text:#4DA3FF;--accent:#22D3EE;--text:#E6EEF8;--muted:#8BA3C1;--node:#0F2240;--node-stroke:#24497A;--core:#0B2A55;--chip-text:#FFFFFF}
+.bg{fill:var(--bg)} .panel{fill:var(--panel)}
+.grid{stroke:var(--grid);stroke-width:1} .grid2{stroke:var(--grid2);stroke-width:1}
+.sans{font-family:Inter, 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif} .mono{font-family:'JetBrains Mono', 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace}
+.t-text{fill:var(--text)} .t-muted{fill:var(--muted)} .t-accent{fill:var(--accent)}
+.t-primary{fill:var(--primary-text)} .t-chip{fill:var(--chip-text)}
+.wire{fill:none;stroke:var(--line);stroke-width:1.6}
+.wire-flow{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-dasharray:4 14;opacity:.55;animation:flow 1.6s linear infinite}
+.node{fill:var(--node);stroke:var(--node-stroke);stroke-width:1.2}
+.core{fill:var(--core);stroke:var(--primary);stroke-width:1.6}
+.frame{fill:none;stroke:var(--line);stroke-width:1.4;stroke-dasharray:6 6}
+.chip{fill:var(--primary)} .chip-o{fill:none;stroke:var(--line);stroke-width:1.2}
+.chip-a{fill:none;stroke:var(--accent);stroke-width:1.2}
+.bar{fill:var(--primary)} .bar-a{fill:var(--accent)}
+.pulse{fill:var(--accent)} .halo{fill:var(--accent);opacity:.22}
+.mark{stroke:var(--accent);stroke-width:1.5;fill:none}
+.port{fill:var(--bg);stroke:var(--accent);stroke-width:1.4}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@keyframes breathe{0%,100%{opacity:.35}50%{opacity:.9}}
+.breathe{animation:breathe 3.2s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.anim,.wire-flow,.breathe{animation:none;display:none}}
+</style>
+<defs><pattern id="g-minor" width="20" height="20" patternUnits="userSpaceOnUse">
+  <path d="M20 0H0V20" fill="none" class="grid" opacity=".55"/></pattern>
+<pattern id="g-major" width="100" height="100" patternUnits="userSpaceOnUse">
+  <rect width="100" height="100" fill="url(#g-minor)"/>
+  <path d="M100 0H0V100" fill="none" class="grid2" opacity=".7"/></pattern><clipPath id="card"><rect width="1200" height="660" rx="16"/></clipPath></defs>
+<g clip-path="url(#card)">
+<rect width="1200" height="660" class="bg"/>
+<rect width="1200" height="660" fill="url(#g-major)"/>
+<path d="M18 32V18H32" class="mark"/>
+<path d="M1182 32V18H1168" class="mark"/>
+<path d="M18 628V642H32" class="mark"/>
+<path d="M1182 628V642H1168" class="mark"/>
+<text x="40" y="52" class="mono t-accent" font-size="13" font-weight="700" text-anchor="start" letter-spacing="2">HOW I BUILD</text>
+<text x="1160" y="52" class="mono t-muted" font-size="12" font-weight="500" text-anchor="end">fig. 01 — clean core + side-by-side extensions</text>
+<rect x="365" y="84" width="470" height="516" rx="22" class="panel" opacity=".55"/>
+<rect x="365" y="84" width="470" height="516" rx="22" class="frame"/>
+<text x="600" y="114" class="mono t-accent" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">INTEGRATION LAYER</text>
+<rect x="458.5" y="128" width="60" height="30" rx="15.0" class="chip-a"/>
+<text x="488.5" y="147.68" class="sans t-accent" font-size="13" font-weight="600" text-anchor="middle">OData</text>
+<rect x="528.5" y="128" width="213" height="30" rx="15.0" class="chip-a"/>
+<text x="635.0" y="147.68" class="sans t-accent" font-size="13" font-weight="600" text-anchor="middle">Communication Arrangements</text>
+<rect x="484.5" y="526" width="74" height="30" rx="15.0" class="chip-a"/>
+<text x="521.5" y="545.68" class="sans t-accent" font-size="13" font-weight="600" text-anchor="middle">SAP BTP</text>
+<rect x="568.5" y="526" width="147" height="30" rx="15.0" class="chip-a"/>
+<text x="642.0" y="545.68" class="sans t-accent" font-size="13" font-weight="600" text-anchor="middle">Integration Suite</text>
+<text x="600" y="582" class="mono t-muted" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2">SIDE-BY-SIDE ON SAP BTP</text>
+<rect x="414" y="174" width="372" height="328" rx="20" class="halo breathe"/>
+<rect x="420" y="180" width="360" height="316" rx="16" class="core"/>
+<text x="600" y="214" class="mono t-accent" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="2">CLEAN CORE · ON-STACK</text>
+<text x="600" y="252" class="sans t-text" font-size="28" font-weight="800" text-anchor="middle">SAP S/4HANA</text>
+<text x="600" y="278" class="sans t-muted" font-size="15" font-weight="500" text-anchor="middle">Public Cloud Edition</text>
+<rect x="465.5" y="300" width="104" height="34" rx="17.0" class="chip"/>
+<text x="517.5" y="322.04" class="sans t-chip" font-size="14" font-weight="600" text-anchor="middle">ABAP Cloud</text>
+<rect x="579.5" y="300" width="49" height="34" rx="17.0" class="chip"/>
+<text x="604.0" y="322.04" class="sans t-chip" font-size="14" font-weight="600" text-anchor="middle">RAP</text>
+<rect x="638.5" y="300" width="96" height="34" rx="17.0" class="chip"/>
+<text x="686.5" y="322.04" class="sans t-chip" font-size="14" font-weight="600" text-anchor="middle">CDS Views</text>
+<path d="M450 360H750" class="grid2"/>
+<text x="600" y="386" class="mono t-muted" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="2">FUNCTIONAL DOMAINS</text>
+<rect x="553.5" y="398" width="45" height="28" rx="14.0" class="chip-o"/>
+<text x="576.0" y="416.68" class="sans t-text" font-size="13" font-weight="600" text-anchor="middle">EWM</text>
+<rect x="608.5" y="398" width="38" height="28" rx="14.0" class="chip-o"/>
+<text x="627.5" y="416.68" class="sans t-text" font-size="13" font-weight="600" text-anchor="middle">MM</text>
+<text x="600" y="462" class="mono t-muted" font-size="11" font-weight="500" text-anchor="middle">released APIs · upgrade-safe extensions</text>
+<path id="wl0" d="M310 178.0C365 178.0 365 250 420 250" class="wire"/>
+<path d="M310 178.0C365 178.0 365 250 420 250" class="wire-flow"/>
+<path id="wr0" d="M890 178.0C835 178.0 835 250 780 250" class="wire"/>
+<path d="M890 178.0C835 178.0 835 250 780 250" class="wire-flow"/>
+<path id="wl1" d="M310 330.0C365 330.0 365 338 420 338" class="wire"/>
+<path d="M310 330.0C365 330.0 365 338 420 338" class="wire-flow"/>
+<path id="wr1" d="M890 330.0C835 330.0 835 338 780 338" class="wire"/>
+<path d="M890 330.0C835 330.0 835 338 780 338" class="wire-flow"/>
+<path id="wl2" d="M310 482.0C365 482.0 365 426 420 426" class="wire"/>
+<path d="M310 482.0C365 482.0 365 426 420 426" class="wire-flow"/>
+<path id="wr2" d="M890 482.0C835 482.0 835 426 780 426" class="wire"/>
+<path d="M890 482.0C835 482.0 835 426 780 426" class="wire-flow"/>
+<rect x="40" y="130" width="270" height="96" rx="12" class="node"/>
+<rect x="40" y="148" width="4" height="60" rx="2" class="bar-a"/>
+<text x="60" y="158" class="mono t-accent" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1">KOTLIN · ANDROID</text>
+<text x="60" y="184" class="sans t-text" font-size="18" font-weight="700" text-anchor="start">Warehouse apps</text>
+<text x="60" y="206" class="sans t-muted" font-size="13" font-weight="400" text-anchor="start">RF data collection on SAP EWM</text>
+<rect x="890" y="130" width="270" height="96" rx="12" class="node"/>
+<rect x="1156" y="148" width="4" height="60" rx="2" class="bar-a"/>
+<text x="910" y="158" class="mono t-accent" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1">FIORI ELEMENTS · WEB</text>
+<text x="910" y="184" class="sans t-text" font-size="18" font-weight="700" text-anchor="start">User interfaces</text>
+<text x="910" y="206" class="sans t-muted" font-size="13" font-weight="400" text-anchor="start">Angular · React · TypeScript</text>
+<rect x="40" y="282" width="270" height="96" rx="12" class="node"/>
+<rect x="40" y="300" width="4" height="60" rx="2" class="bar-a"/>
+<text x="60" y="310" class="mono t-accent" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1">PYTHON · STREAMLIT</text>
+<text x="60" y="336" class="sans t-text" font-size="18" font-weight="700" text-anchor="start">Internal automation</text>
+<text x="60" y="358" class="sans t-muted" font-size="13" font-weight="400" text-anchor="start">Finance &amp; HR routines</text>
+<rect x="890" y="282" width="270" height="96" rx="12" class="node"/>
+<rect x="1156" y="300" width="4" height="60" rx="2" class="bar-a"/>
+<text x="910" y="310" class="mono t-accent" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1">SALESFORCE</text>
+<text x="910" y="336" class="sans t-text" font-size="18" font-weight="700" text-anchor="start">CRM integration</text>
+<text x="910" y="358" class="sans t-muted" font-size="13" font-weight="400" text-anchor="start">S/4HANA data exposed to the CRM</text>
+<rect x="40" y="434" width="270" height="96" rx="12" class="node"/>
+<rect x="40" y="452" width="4" height="60" rx="2" class="bar-a"/>
+<text x="60" y="462" class="mono t-accent" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1">JAVA</text>
+<text x="60" y="488" class="sans t-text" font-size="18" font-weight="700" text-anchor="start">Backend services</text>
+<text x="60" y="510" class="sans t-muted" font-size="13" font-weight="400" text-anchor="start">Service layer next to the ERP</text>
+<rect x="890" y="434" width="270" height="96" rx="12" class="node"/>
+<rect x="1156" y="452" width="4" height="60" rx="2" class="bar-a"/>
+<text x="910" y="462" class="mono t-accent" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1">AI · MCP</text>
+<text x="910" y="488" class="sans t-text" font-size="18" font-weight="700" text-anchor="start">LLM agents</text>
+<text x="910" y="510" class="sans t-muted" font-size="13" font-weight="400" text-anchor="start">Natural-language access to the ERP</text>
+<rect x="360" y="209.0" width="10" height="10" transform="rotate(45 365 214.0)" class="port"/>
+<circle cx="420" cy="250" r="4" class="port"/>
+<rect x="830" y="209.0" width="10" height="10" transform="rotate(45 835 214.0)" class="port"/>
+<circle cx="780" cy="250" r="4" class="port"/>
+<rect x="360" y="329.0" width="10" height="10" transform="rotate(45 365 334.0)" class="port"/>
+<circle cx="420" cy="338" r="4" class="port"/>
+<rect x="830" y="329.0" width="10" height="10" transform="rotate(45 835 334.0)" class="port"/>
+<circle cx="780" cy="338" r="4" class="port"/>
+<rect x="360" y="449.0" width="10" height="10" transform="rotate(45 365 454.0)" class="port"/>
+<circle cx="420" cy="426" r="4" class="port"/>
+<rect x="830" y="449.0" width="10" height="10" transform="rotate(45 835 454.0)" class="port"/>
+<circle cx="780" cy="426" r="4" class="port"/>
+<g class="anim"><circle r="7.68" class="halo"><animateMotion dur="2.4s" begin="0.0s" repeatCount="indefinite"><mpath xlink:href="#wl0"/></animateMotion></circle><circle r="3.2" class="pulse"><animateMotion dur="2.4s" begin="0.0s" repeatCount="indefinite"><mpath xlink:href="#wl0"/></animateMotion></circle></g>
+<g class="anim"><circle r="7.68" class="halo"><animateMotion dur="2.4s" begin="0.37s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath xlink:href="#wr0"/></animateMotion></circle><circle r="3.2" class="pulse"><animateMotion dur="2.4s" begin="0.37s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath xlink:href="#wr0"/></animateMotion></circle></g>
+<g class="anim"><circle r="7.68" class="halo"><animateMotion dur="2.4s" begin="0.74s" repeatCount="indefinite"><mpath xlink:href="#wl1"/></animateMotion></circle><circle r="3.2" class="pulse"><animateMotion dur="2.4s" begin="0.74s" repeatCount="indefinite"><mpath xlink:href="#wl1"/></animateMotion></circle></g>
+<g class="anim"><circle r="7.68" class="halo"><animateMotion dur="2.4s" begin="1.11s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath xlink:href="#wr1"/></animateMotion></circle><circle r="3.2" class="pulse"><animateMotion dur="2.4s" begin="1.11s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath xlink:href="#wr1"/></animateMotion></circle></g>
+<g class="anim"><circle r="7.68" class="halo"><animateMotion dur="2.4s" begin="1.48s" repeatCount="indefinite"><mpath xlink:href="#wl2"/></animateMotion></circle><circle r="3.2" class="pulse"><animateMotion dur="2.4s" begin="1.48s" repeatCount="indefinite"><mpath xlink:href="#wl2"/></animateMotion></circle></g>
+<g class="anim"><circle r="7.68" class="halo"><animateMotion dur="2.4s" begin="1.85s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath xlink:href="#wr2"/></animateMotion></circle><circle r="3.2" class="pulse"><animateMotion dur="2.4s" begin="1.85s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath xlink:href="#wr2"/></animateMotion></circle></g>
+<path d="M40 630H72" class="wire"/><circle cx="56" cy="630" r="7" class="halo"/><circle cx="56" cy="630" r="3" class="pulse"/>
+<text x="82" y="634" class="sans t-muted" font-size="12" font-weight="400" text-anchor="start">data flow (OData / APIs)</text>
+<rect x="250" y="621" width="30" height="18" rx="5" class="frame"/>
+<text x="290" y="634" class="sans t-muted" font-size="12" font-weight="400" text-anchor="start">integration boundary</text>
+<rect x="440" y="621" width="30" height="18" rx="5" class="chip"/>
+<text x="480" y="634" class="sans t-muted" font-size="12" font-weight="400" text-anchor="start">on-stack (Clean Core)</text>
+<rect x="645" y="625" width="10" height="10" transform="rotate(45 650 630)" class="port"/>
+<text x="664" y="634" class="sans t-muted" font-size="12" font-weight="400" text-anchor="start">communication scenario</text>
+</g></svg>
