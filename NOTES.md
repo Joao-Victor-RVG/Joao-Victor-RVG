@@ -84,7 +84,10 @@ API Business Hub sandbox) or mock data. Nothing from J.Assy.
 ## 4. Maintenance
 
 - **Edit visuals:** change `tools/build_assets.py`, run `python3 tools/build_assets.py`,
-  commit the regenerated `assets/*.svg`.
+  commit the regenerated `assets/*.svg`. SVG text lives in `STRINGS` (one entry per
+  language); Portuguese assets are written with the `-pt-BR-` suffix.
+- **Two languages:** `README.md` (English, default) and `README.pt-BR.md` (Portuguese),
+  linked by the language badges at the top of each. Any content change goes into both.
 - **Stats cards blank?** The public github-readme-stats instance is rate limited.
   Self-host instructions are in the HTML comment above the stats section in `README.md`.
 - **Certifications:** when you earn a formal SAP certification exam (e.g. *SAP Certified

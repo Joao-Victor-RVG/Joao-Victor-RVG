@@ -5,6 +5,9 @@ Every asset is emitted in a -dark and a -light variant from the same layout,
 so both themes always stay in sync. `architecture.svg` is an extra adaptive
 copy that switches palette with prefers-color-scheme when opened on its own.
 
+Text is localized through STRINGS: English writes `<name>-<mode>.svg` (used by
+README.md), Portuguese writes `<name>-pt-BR-<mode>.svg` (used by README.pt-BR.md).
+
 Constraints for GitHub rendering: no <script>, no external fonts or images;
 animation uses SMIL / CSS only and is disabled under prefers-reduced-motion.
 
@@ -32,6 +35,79 @@ PALETTES = {
         "accent": "#0891B2", "text": "#0A1628", "muted": "#4A6382",
         "node": "#FFFFFF", "node_stroke": "#B9CFEA", "core": "#EAF2FE",
         "chip_text": "#FFFFFF",
+    },
+}
+
+# Localized copy. Keys are shared by every language; "en" is the default.
+STRINGS = {
+    "en": {
+        "banner_title": "João Victor R. V. Godoi — SAP Developer",
+        "banner_desc": "ABAP Cloud & RAP Developer · SAP S/4HANA Public Cloud Edition · "
+                       "SAP BTP Side-by-Side · AI for ERP (MCP)",
+        "kicker": "// SAP DEVELOPER — CALDAS NOVAS · GOIÁS · BRAZIL",
+        "headline": "ABAP Cloud & RAP Developer  ·  SAP S/4HANA Public Cloud Edition",
+        "subline": "SAP BTP Side-by-Side  ·  AI for ERP (MCP)",
+        "sheet": "REV 2026 · SHEET 01",
+        "arch_title": "How I build: SAP S/4HANA Clean Core with side-by-side extensions",
+        "arch_desc": "SAP S/4HANA Public Cloud Edition in the center (ABAP Cloud, RAP, CDS Views; EWM and MM), "
+                     "wrapped by an integration layer (OData, Communication Arrangements, SAP BTP, Integration "
+                     "Suite), connected to side-by-side apps: Kotlin/Android warehouse apps on EWM, "
+                     "Python/Streamlit automation, Java services, Fiori Elements and web UIs, Salesforce CRM "
+                     "and AI agents via MCP.",
+        "arch_kicker": "HOW I BUILD",
+        "fig": "fig. 01 — clean core + side-by-side extensions",
+        "integration": "INTEGRATION LAYER",
+        "on_btp": "SIDE-BY-SIDE ON SAP BTP",
+        "domains": "FUNCTIONAL DOMAINS",
+        "released": "released APIs · upgrade-safe extensions",
+        "left": [
+            ("KOTLIN · ANDROID", "Warehouse apps", "RF data collection on SAP EWM"),
+            ("PYTHON · STREAMLIT", "Internal automation", "Finance & HR routines"),
+            ("JAVA", "Backend services", "Service layer next to the ERP"),
+        ],
+        "right": [
+            ("FIORI ELEMENTS · WEB", "User interfaces", "Angular · React · TypeScript"),
+            ("SALESFORCE", "CRM integration", "S/4HANA data exposed to the CRM"),
+            ("AI · MCP", "LLM agents", "Natural-language access to the ERP"),
+        ],
+        # legend: labels plus the x of each marker (2nd..4th); text sits 40px / 14px after it
+        "legend": ["data flow (OData / APIs)", "integration boundary",
+                   "on-stack (Clean Core)", "communication scenario"],
+        "legend_x": (250, 440, 650),
+    },
+    "pt-BR": {
+        "banner_title": "João Victor R. V. Godoi — Desenvolvedor SAP",
+        "banner_desc": "Desenvolvedor ABAP Cloud & RAP · SAP S/4HANA Public Cloud Edition · "
+                       "SAP BTP Side-by-Side · IA para ERP (MCP)",
+        "kicker": "// DESENVOLVEDOR SAP — CALDAS NOVAS · GOIÁS · BRASIL",
+        "headline": "Desenvolvedor ABAP Cloud & RAP  ·  SAP S/4HANA Public Cloud Edition",
+        "subline": "SAP BTP Side-by-Side  ·  IA para ERP (MCP)",
+        "sheet": "REV 2026 · FOLHA 01",
+        "arch_title": "Como eu construo: SAP S/4HANA Clean Core com extensões side-by-side",
+        "arch_desc": "SAP S/4HANA Public Cloud Edition no centro (ABAP Cloud, RAP, CDS Views; EWM e MM), "
+                     "envolvido por uma camada de integração (OData, Communication Arrangements, SAP BTP, "
+                     "Integration Suite), conectado a apps side-by-side: apps de armazém em Kotlin/Android no EWM, "
+                     "automação em Python/Streamlit, serviços Java, Fiori Elements e interfaces web, Salesforce CRM "
+                     "e agentes de IA via MCP.",
+        "arch_kicker": "COMO EU CONSTRUO",
+        "fig": "fig. 01 — clean core + extensões side-by-side",
+        "integration": "CAMADA DE INTEGRAÇÃO",
+        "on_btp": "SIDE-BY-SIDE NO SAP BTP",
+        "domains": "DOMÍNIOS FUNCIONAIS",
+        "released": "APIs liberadas · extensões upgrade-safe",
+        "left": [
+            ("KOTLIN · ANDROID", "Apps de armazém", "Coleta de dados RF no SAP EWM"),
+            ("PYTHON · STREAMLIT", "Automação interna", "Rotinas de finanças e RH"),
+            ("JAVA", "Serviços de backend", "Camada de serviços ao lado do ERP"),
+        ],
+        "right": [
+            ("FIORI ELEMENTS · WEB", "Interfaces de usuário", "Angular · React · TypeScript"),
+            ("SALESFORCE", "Integração com CRM", "Dados do S/4HANA expostos ao CRM"),
+            ("IA · MCP", "Agentes de LLM", "Acesso ao ERP em linguagem natural"),
+        ],
+        "legend": ["fluxo de dados (OData / APIs)", "fronteira de integração",
+                   "on-stack (Clean Core)", "cenário de comunicação"],
+        "legend_x": (290, 490, 690),
     },
 }
 
@@ -126,11 +202,10 @@ def svg_open(w, h, title, desc, mode):
 
 # --------------------------------------------------------------------------- banner
 
-def banner(mode):
+def banner(mode, lang="en"):
     W, H = 1200, 300
-    out = [svg_open(W, H, "João Victor R. V. Godoi — SAP Developer",
-                    "ABAP Cloud & RAP Developer · SAP S/4HANA Public Cloud Edition · "
-                    "SAP BTP Side-by-Side · AI for ERP (MCP)", mode)]
+    t = STRINGS[lang]
+    out = [svg_open(W, H, t["banner_title"], t["banner_desc"], mode)]
     out.append(f"<defs>{grid_defs()}"
                '<clipPath id="card"><rect width="1200" height="300" rx="16"/></clipPath></defs>')
     out.append('<g clip-path="url(#card)">')
@@ -139,13 +214,13 @@ def banner(mode):
     out.append(corner_marks(W, H))
 
     # left: identity
-    out.append(text(64, 78, "// SAP DEVELOPER — CALDAS NOVAS · GOIÁS · BRAZIL", "mono t-accent", 14, 500,
+    out.append(text(64, 78, t["kicker"], "mono t-accent", 14, 500,
                     extra=' letter-spacing="1.2"'))
     out.append(text(62, 140, "João Victor R. V. Godoi", "sans t-text", 50, 700, extra=' letter-spacing="-0.5"'))
     out.append(f'<rect x="64" y="158" width="56" height="4" rx="2" class="bar"/>'
                f'<rect x="124" y="158" width="14" height="4" rx="2" class="bar-a"/>')
-    out.append(text(64, 196, "ABAP Cloud & RAP Developer  ·  SAP S/4HANA Public Cloud Edition", "sans t-text", 20, 500))
-    out.append(text(64, 226, "SAP BTP Side-by-Side  ·  AI for ERP (MCP)", "sans t-muted", 20, 500))
+    out.append(text(64, 196, t["headline"], "sans t-text", 20, 500))
+    out.append(text(64, 226, t["subline"], "sans t-muted", 20, 500))
 
     labels = ["ABAP Cloud", "RAP", "CDS", "OData", "BTP", "MCP"]
     x = 64
@@ -173,24 +248,12 @@ def banner(mode):
     out.append(text(cx, cy - 3, "S/4HANA", "sans t-text", 13, 700, "middle"))
     out.append(text(cx, cy + 13, "CLEAN CORE", "mono t-accent", 8.5, 600, "middle", ' letter-spacing="1"'))
 
-    out.append(text(W - 40, H - 30, "REV 2026 · SHEET 01", "mono t-muted", 10, 500, "end", ' letter-spacing="1.5"'))
+    out.append(text(W - 40, H - 30, t["sheet"], "mono t-muted", 10, 500, "end", ' letter-spacing="1.5"'))
     out.append("</g></svg>")
     return "\n".join(out)
 
 
 # ------------------------------------------------------------------- architecture
-
-LEFT = [
-    ("KOTLIN · ANDROID", "Warehouse apps", "RF data collection on SAP EWM"),
-    ("PYTHON · STREAMLIT", "Internal automation", "Finance & HR routines"),
-    ("JAVA", "Backend services", "Service layer next to the ERP"),
-]
-RIGHT = [
-    ("FIORI ELEMENTS · WEB", "User interfaces", "Angular · React · TypeScript"),
-    ("SALESFORCE", "CRM integration", "S/4HANA data exposed to the CRM"),
-    ("AI · MCP", "LLM agents", "Natural-language access to the ERP"),
-]
-
 
 def node(x, y, w, h, tag, title, sub, accent_right=False):
     bar_x = x + w - 4 if accent_right else x
@@ -204,14 +267,10 @@ def node(x, y, w, h, tag, title, sub, accent_right=False):
     ])
 
 
-def architecture(mode):
+def architecture(mode, lang="en"):
     W, H = 1200, 660
-    out = [svg_open(W, H, "How I build: SAP S/4HANA Clean Core with side-by-side extensions",
-                    "SAP S/4HANA Public Cloud Edition in the center (ABAP Cloud, RAP, CDS Views; EWM and MM), "
-                    "wrapped by an integration layer (OData, Communication Arrangements, SAP BTP, Integration "
-                    "Suite), connected to side-by-side apps: Kotlin/Android warehouse apps on EWM, "
-                    "Python/Streamlit automation, Java services, Fiori Elements and web UIs, Salesforce CRM "
-                    "and AI agents via MCP.", mode)]
+    t = STRINGS[lang]
+    out = [svg_open(W, H, t["arch_title"], t["arch_desc"], mode)]
     out.append(f"<defs>{grid_defs()}"
                f'<clipPath id="card"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>')
     out.append('<g clip-path="url(#card)">')
@@ -219,17 +278,17 @@ def architecture(mode):
     out.append(f'<rect width="{W}" height="{H}" fill="url(#g-major)"/>')
     out.append(corner_marks(W, H))
 
-    out.append(text(40, 52, "HOW I BUILD", "mono t-accent", 13, 700, extra=' letter-spacing="2"'))
-    out.append(text(W - 40, 52, "fig. 01 — clean core + side-by-side extensions", "mono t-muted", 12, 500, "end"))
+    out.append(text(40, 52, t["arch_kicker"], "mono t-accent", 13, 700, extra=' letter-spacing="2"'))
+    out.append(text(W - 40, 52, t["fig"], "mono t-muted", 12, 500, "end"))
 
     # integration frame
     fx, fy, fw, fh = 365, 84, 470, 516
     out.append(f'<rect x="{fx}" y="{fy}" width="{fw}" height="{fh}" rx="22" class="panel" opacity=".55"/>')
     out.append(f'<rect x="{fx}" y="{fy}" width="{fw}" height="{fh}" rx="22" class="frame"/>')
-    out.append(text(600, fy + 30, "INTEGRATION LAYER", "mono t-accent", 11, 700, "middle", ' letter-spacing="2"'))
+    out.append(text(600, fy + 30, t["integration"], "mono t-accent", 11, 700, "middle", ' letter-spacing="2"'))
     out.append(chip_row(600, fy + 44, ["OData", "Communication Arrangements"], 13, 30, "chip-a"))
     out.append(chip_row(600, fy + fh - 74, ["SAP BTP", "Integration Suite"], 13, 30, "chip-a"))
-    out.append(text(600, fy + fh - 18, "SIDE-BY-SIDE ON SAP BTP", "mono t-muted", 10, 600, "middle",
+    out.append(text(600, fy + fh - 18, t["on_btp"], "mono t-muted", 10, 600, "middle",
                     ' letter-spacing="2"'))
 
     # core
@@ -241,9 +300,9 @@ def architecture(mode):
     out.append(text(600, cy0 + 98, "Public Cloud Edition", "sans t-muted", 15, 500, "middle"))
     out.append(chip_row(600, cy0 + 120, ["ABAP Cloud", "RAP", "CDS Views"], 14, 34, "chip"))
     out.append(f'<path d="M{cx0 + 30} {cy0 + 180}H{cx0 + cw - 30}" class="grid2"/>')
-    out.append(text(600, cy0 + 206, "FUNCTIONAL DOMAINS", "mono t-muted", 10, 600, "middle", ' letter-spacing="2"'))
+    out.append(text(600, cy0 + 206, t["domains"], "mono t-muted", 10, 600, "middle", ' letter-spacing="2"'))
     out.append(chip_row(600, cy0 + 218, ["EWM", "MM"], 13, 28, "chip-o"))
-    out.append(text(600, cy0 + 282, "released APIs · upgrade-safe extensions", "mono t-muted", 11, 500, "middle"))
+    out.append(text(600, cy0 + 282, t["released"], "mono t-muted", 11, 500, "middle"))
 
     # side-by-side nodes + wires
     nw, nh = 270, 96
@@ -252,7 +311,7 @@ def architecture(mode):
     wires, pulses, nodes, marks = [], [], [], []
     for i, (y, py) in enumerate(zip(ys, ports)):
         ncy = y + nh / 2
-        for side, items in (("l", LEFT), ("r", RIGHT)):
+        for side, items in (("l", t["left"]), ("r", t["right"])):
             tag, title, sub = items[i]
             if side == "l":
                 x, x0, c, x1 = 40, 40 + nw, fx, cx0
@@ -274,13 +333,15 @@ def architecture(mode):
     # legend
     ly = H - 26
     out.append(f'<path d="M40 {ly - 4}H72" class="wire"/>{pulse_static(56, ly - 4)}')
-    out.append(text(82, ly, "data flow (OData / APIs)", "sans t-muted", 12))
-    out.append(f'<rect x="250" y="{ly - 13}" width="30" height="18" rx="5" class="frame"/>')
-    out.append(text(290, ly, "integration boundary", "sans t-muted", 12))
-    out.append(f'<rect x="440" y="{ly - 13}" width="30" height="18" rx="5" class="chip"/>')
-    out.append(text(480, ly, "on-stack (Clean Core)", "sans t-muted", 12))
-    out.append(f'<rect x="{650 - 5}" y="{ly - 9}" width="10" height="10" transform="rotate(45 650 {ly - 4})" class="port"/>')
-    out.append(text(664, ly, "communication scenario", "sans t-muted", 12))
+    l1, l2, l3, l4 = t["legend"]
+    bx, cx, px = t["legend_x"]
+    out.append(text(82, ly, l1, "sans t-muted", 12))
+    out.append(f'<rect x="{bx}" y="{ly - 13}" width="30" height="18" rx="5" class="frame"/>')
+    out.append(text(bx + 40, ly, l2, "sans t-muted", 12))
+    out.append(f'<rect x="{cx}" y="{ly - 13}" width="30" height="18" rx="5" class="chip"/>')
+    out.append(text(cx + 40, ly, l3, "sans t-muted", 12))
+    out.append(f'<rect x="{px - 5}" y="{ly - 9}" width="10" height="10" transform="rotate(45 {px} {ly - 4})" class="port"/>')
+    out.append(text(px + 14, ly, l4, "sans t-muted", 12))
     out.append("</g></svg>")
     return "\n".join(out)
 
@@ -309,10 +370,14 @@ def divider(mode):
 
 def main():
     ASSETS.mkdir(exist_ok=True)
-    for name, fn in (("banner", banner), ("architecture", architecture), ("divider", divider)):
-        for mode in ("dark", "light"):
-            (ASSETS / f"{name}-{mode}.svg").write_text(fn(mode) + "\n", encoding="utf-8")
-    (ASSETS / "architecture.svg").write_text(architecture("auto") + "\n", encoding="utf-8")
+    for mode in ("dark", "light"):
+        (ASSETS / f"divider-{mode}.svg").write_text(divider(mode) + "\n", encoding="utf-8")
+    for lang in STRINGS:
+        suffix = "" if lang == "en" else f"-{lang}"
+        for name, fn in (("banner", banner), ("architecture", architecture)):
+            for mode in ("dark", "light"):
+                (ASSETS / f"{name}{suffix}-{mode}.svg").write_text(fn(mode, lang) + "\n", encoding="utf-8")
+        (ASSETS / f"architecture{suffix}.svg").write_text(architecture("auto", lang) + "\n", encoding="utf-8")
     print("wrote", sorted(p.name for p in ASSETS.glob("*.svg")))
 
 
